@@ -4,6 +4,11 @@ var util = require('util');
 var webrtc = require('webrtcsupport');
 var WildEmitter = require('wildemitter');
 
+/* so it works on nodejs */
+var navigator = navigator || {};
+window.setTimeout = window.setTimeout || setTimeout;
+window.clearInterval = window.clearInterval || clearInterval;
+
 function dumpSDP(description) {
     return {
         type: description.type,
