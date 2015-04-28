@@ -6,6 +6,7 @@ var WildEmitter = require('wildemitter');
 
 /* so it works on nodejs */
 var navigator = navigator || {};
+var window = window || {};
 window.setTimeout = window.setTimeout || setTimeout;
 window.clearInterval = window.clearInterval || clearInterval;
 
